@@ -111,6 +111,7 @@
     const headerTitle = document.getElementById('header-title');
     const step1 = document.getElementById('step1');
     const step2 = document.getElementById('step2');
+    const step3 = document.getElementById('step3');
     let clickedCardsCount = 0;
     for (let i = 0; i < numberOfPlayers; i++) {
       const card = document.createElement('div');
@@ -137,6 +138,7 @@
               cardContainer.classList.add('hidden');
               step1.classList.add('hidden');
               step2.classList.add('hidden');
+              step3.classList.add('hidden');
             } else {
               headerTitle.textContent = `Player ${clickedCardsCount + 1}`;
             }
