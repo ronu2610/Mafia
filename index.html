@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mafia Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fredoka One', cursive;
+        }
+    </style>
+    <script>
+        function goToNextScreen() {
+            const playerCount = document.getElementById('playerCount').value;
+            window.location.href = `next-screen.html?players=${playerCount}`;
+        }
+
+        function goToRulesPage() {
+            window.location.href = "rules.html";
+        }
+    </script>
+</head>
+<body class="bg-purple-600 flex flex-col items-center text-white min-h-screen">
+    <!-- Header -->
+    <div class="w-full flex justify-end items-center p-4">
+        <button onclick="goToRulesPage()" class="bg-purple-700 px-4 py-2 rounded-full flex items-center space-x-2">
+            <i class="fas fa-question-circle"></i>
+            <span>Rules</span>
+        </button>
+    </div>
+
+    <!-- Title -->
+    <div class="text-center mt-8">
+        <h1 class="text-4xl font-bold">Mafia</h1>
+    </div>
+
+    <!-- Player Count Selector -->
+    <div class="flex flex-col items-center justify-center flex-grow">
+        <h2 class="text-2xl font-bold mb-4">How Many Players</h2>
+        <div class="flex items-center bg-white rounded-full p-2">
+            <div class="flex items-center justify-center bg-green-400 text-black rounded-full w-12 h-12">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="flex items-center justify-center bg-green-400 text-black rounded-full w-32 h-16 ml-2">
+                <select id="playerCount" class="bg-green-400 text-black text-2xl font-bold rounded-full w-full h-full text-center appearance-none">
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Continue Button -->
+    <div class="mb-8">
+        <button onclick="goToNextScreen()" class="bg-yellow-400 text-black text-xl font-bold py-2 px-8 rounded-full">Continue</button>
+    </div>
+</body>
+</html>
