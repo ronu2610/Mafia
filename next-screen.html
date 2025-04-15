@@ -10,7 +10,6 @@
         body {
           font-family: 'Fredoka One', cursive;
         }
-
         .popup {
           display: none;
           position: fixed;
@@ -25,7 +24,6 @@
           z-index: 1000;
           text-align: center;
         }
-
         .overlay {
           display: none;
           position: fixed;
@@ -36,11 +34,9 @@
           background-color: rgba(0, 0, 0, 0.5);
           z-index: 999;
         }
-
         .hidden {
           display: none;
         }
-
         .progress-bar {
           width: 100%;
           background-color: #ddd;
@@ -48,7 +44,6 @@
           overflow: hidden;
           margin-top: 10px;
         }
-
         .progress {
           height: 10px;
           background-color: purple;
@@ -92,8 +87,8 @@
     // Ensure there is only 1 Doctor and 1 Detective
     assignedRoles.push('Doctor');
     assignedRoles.push('Detective');
-    // Calculate the number of Mafia (less than 1/4th of total players)
-    const maxMafiaCount = Math.floor(numberOfPlayers / 4);
+
+    const maxMafiaCount = Math.ceil(numberOfPlayers / 5);
     for (let i = 0; i < maxMafiaCount; i++) {
       assignedRoles.push('Mafia');
     }
